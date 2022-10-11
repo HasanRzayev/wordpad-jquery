@@ -1,0 +1,41 @@
+body{
+    
+}
+
+.one{
+    width: 800px;
+    margin: auto;
+    padding-top: 150px;
+}
+.two{
+    width: 800px;
+    margin: auto;
+    padding-top: 20px;
+}
+textarea{
+    width: 800px;
+    height: 300px;
+}
+
+button{
+    width: 100px;
+    padding: 10px;
+    margin-left: 20px;
+}
+select{
+    width: 150px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.boldText {
+    font-weight:bold;
+}
+
+.italictext {
+    font-style:italic;
+}
+
+.underline_text {
+    text-decoration:underline;
+}

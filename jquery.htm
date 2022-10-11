@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">
+        <button id="bold"><b>B</b></button>
+        <button  id="italic"> <i>I</i></button>
+        <button  id="underline"><u>U</u></button>
+        <select id="colors">
+       
+       
+          </select>
+        <select id="fonts">
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+            <option value="26">26</option>
+            <option value="28">28</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+            <option value="72">72</option>
+         
+        </select>
+    </div>
+    <div class="two">
+        <textarea></textarea>
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        let colors = ["indianred","lightcoral","salmon","darksalmon","lightsalmon","crimson","red","firebrick","darkred","pink","lightpink","hotpink","deeppink","mediumvioletred","palevioletred","lightsalmon","coral","tomato","orangered","darkorange","orange","gold","yellow","lightyellow","lemonchiffon","lightgoldenrodyellow","papayawhip","moccasin","peachpuff","palegoldenrod","khaki","darkkhaki","lavender","thistle","plum","violet","orchid","fuchsia","magenta","mediumorchid","mediumpurple","rebeccapurple","blueviolet","darkviolet","darkorchid","darkmagenta","purple","indigo","slateblue","darkslateblue","mediumslateblue","greenyellow","chartreuse","lawngreen","lime","limegreen","palegreen","lightgreen","mediumspringgreen","springgreen","mediumseagreen","seagreen","forestgreen","green","darkgreen","yellowgreen","olivedrab","olive","darkolivegreen","mediumaquamarine","darkseagreen","lightseagreen","darkcyan","teal","aqua","cyan","lightcyan","paleturquoise","aquamarine","turquoise","mediumturquoise","darkturquoise","cadetblue","steelblue","lightsteelblue","powderblue","lightblue","skyblue","lightskyblue","deepskyblue","dodgerblue","cornflowerblue","mediumslateblue","royalblue","blue","mediumblue","darkblue","navy","midnightblue","cornsilk","blanchedalmond","bisque","navajowhite","wheat","burlywood","tan","rosybrown","sandybrown","goldenrod","darkgoldenrod","peru","chocolate","saddlebrown","sienna","brown","maroon","white","snow","honeydew","mintcream","azure","aliceblue","ghostwhite","whitesmoke","seashell","beige","oldlace","floralwhite","ivory","antiquewhite","linen","lavenderblush","mistyrose","gainsboro","lightgray","silver","darkgray","gray","dimgray","lightslategray","slategray","darkslategray","black"];
+        for (let index = 0; index < colors.length; index++) {
+            const element = colors[index];
+            $('#colors').append(`<option value="${element}">
+                                       ${element}
+                                  </option>`);
+        }
+       
+        
+       
+        $("#bold").click(function(){
+            $("textarea").toggleClass("boldText")
+        })
+        $("#italic").click(function(){
+            $("textarea").toggleClass("italictext")
+        })
+        $("#underline").click(function(){
+            $("textarea").toggleClass("underline_text")
+        })
+        $("#colors").change(function(){
+          
+            $("textarea").css("color",  $("#colors").val()  )
+        })
+        $("#fonts").change(function(){
+          
+          $("textarea").css("font-size",  $("#fonts").val() +"px" )
+      })
+      
+    </script>
+</body>
+</html>
